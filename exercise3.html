@@ -37,15 +37,15 @@
         console.log(classInfo.details.semester)
         console.log(classInfo)
 
-        let {className, students} = classInfo;
+        const {className, students} = classInfo;
         console.log(className)
         console.log(students)
 
-        let {details: {semester, year}} = classInfo;
+        const {semester, year} = classInfo.details;
         console.log(semester)
         console.log(year)
 
-        let {students: [student1, student2, ...remainingStudents]} = classInfo;
+        const [student1, student2, ...remainingStudents]= classRoster;
         console.log(student1)
         console.log(student2)
         console.log(remainingStudents)
