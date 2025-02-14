@@ -19,7 +19,7 @@
         let classInfo = {
             className: 'ENSF381: Full-Stack Web Development',
             Instructor: 'Dr. Smith',
-            students: ['Alice', 'Tom', 'Charlie', 'Diana', 'Evan'],
+            students: classRoster,
             details:{
                 semester: 'Winter',
                 year: 2025
@@ -35,6 +35,22 @@
         console.log(classInfo['className'])
         console.log(classInfo['students'])
         console.log(classInfo.details.semester)
+        console.log(classInfo)
+
+        let {className, students} = classInfo;
+        console.log(className)
+        console.log(students)
+
+        let {details: {semester, year}} = classInfo;
+        console.log(semester)
+        console.log(year)
+
+        let {students: [student1, student2, ...remainingStudents]} = classInfo;
+        console.log(student1)
+        console.log(student2)
+        console.log(remainingStudents)
+
+
 
 
 
