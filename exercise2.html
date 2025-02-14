@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+
+    <title>Exericse 2 - Calculator</title>
+    
+</head>
+<body>
+<h1>Exericse 2 - Calculator</h1>
+<script>
+
+// /////// Declaring Functions
+// function add(a, b) {
+
+//     return a + b;
+// }
+
+// function subtract(a, b) {
+
+//     return a - b;
+// }
+
+
+
+
+// /////// Using Defaul Parameters
+// function add(a, b=0) {
+
+// return a + b;
+// }
+
+// function subtract(a, b=0) {
+
+// return a - b;
+// }
+
+// console.log(add(5, 10));
+// console.log(subtract(5, 10));
+
+
+
+
+
+// //////// Implementing Arrow Functions
+add = (a, b=0) => a + b;
+subtract = (a, b=0) => a - b;
+multiply = (a, b=0) => a * b;
+divide = (a, b=0) => {
+
+    if (b == 0) {
+     return "Cannot Divide by Zero!"
+    }
+
+    return a / b;
+    
+}
+
+// console.log(add(5, 10));
+// console.log(subtract(5, 10));
+// console.log(multiply(5, 10));
+// console.log(divide(5, 0));
+
+
+
+
+// Create the calculator function that accepts a callback
+function calculator(a, b, operation) {
+    return operation(a, b); // Calls the passed callback function with the two numbers
+}
+
+// Test the calculator function with add, multiply, subtract, divide functions as callbacks
+console.log(calculator(5, 10, add));       
+console.log(calculator(5, 10, multiply));  
+console.log(calculator(5, 0, divide));
+console.log(calculator(2, 6, subtract));
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+
+</body>
+</html>
